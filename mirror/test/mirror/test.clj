@@ -29,6 +29,10 @@
 (deftest horizontal-test
    (testing "horizontal-mirror"  
     
+    (let [input "lVHt\nCSbg\nyeCt"
+          solution "yeCt\nCSbg\nlVHt"]
+     (is (= solution (horizontal input))))
+    
     (let [input "lVHt\nJVhv\nCSbg\nyeCt"
           solution "yeCt\nCSbg\nJVhv\nlVHt"]
      (is (= solution (horizontal input))))
@@ -45,3 +49,15 @@
           solution "QoSy\nuGef\ndZQn\nFYvi"]
       (is (= solution (horizontal input))))))
 
+
+(deftest readme-test
+  (test "readme-mirror"
+
+    (let [input "lVHt\nCDGIdolo\nJVhv\nUstXfrIg" 
+          solution "JVhv\nolodIGDC\nlVHt\ngIrfXtsU"]     
+      (is (= solution (readme input))))) 
+
+    (let [input "lVHt\nCDGIdolo\nJVhv\nUstXfrIg" 
+          solution "JVhv\nolodIGDC\nlVHt\ngIrfXtsU"]     
+      (is (= solution (readme input))))) 
+  )

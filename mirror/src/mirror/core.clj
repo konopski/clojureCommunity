@@ -9,8 +9,16 @@
         (string/join "\n") )
 )
   
-  
-
-
 (defn horizontal [strng] 
-  "return mirrored strng")
+  (->> strng
+        string/split-lines 
+        reverse
+        (string/join "\n") )
+)
+
+(defn readme [strng] 
+  (->> strng
+        string/split-lines 
+        reverse
+        (string/join "\n") )
+)
