@@ -3,7 +3,7 @@
 
 
 (defn vertical [strng] 
-  (map #(apply str %) (map reverse (string/split-lines strng) ) ) ) 
+  (map #(apply str % (map reverse (string/split-lines strng) ) ) ) )
   
 
 (defn horizontal [strng] 
