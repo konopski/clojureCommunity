@@ -3,9 +3,8 @@
 
 
 (defn vertical [strng] 
-  (map #(apply str %) (map reverse (string/split-lines strng) ) ) ) 
+ (string/join "\n" (map (comp #(apply str %) reverse) (string/split-lines strng) ) ) )  
   
 
 (defn horizontal [strng] 
   "return mirrored strng")
-  
