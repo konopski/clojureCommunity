@@ -51,13 +51,8 @@
 
 
 (deftest readme-test
-  (test "readme-mirror"
+  (testing "readme-mirror"
 
     (let [input "lVHt\nCDGIdolo\nJVhv\nUstXfrIg" 
           solution "JVhv\nolodIGDC\nlVHt\ngIrfXtsU"]     
-      (is (= solution (readme input))))) 
-
-    (let [input "lVHt\nCDGIdolo\nJVhv\nUstXfrIg" 
-          solution "JVhv\nolodIGDC\nlVHt\ngIrfXtsU"]     
-      (is (= solution (readme input))))) 
-  )
+      (is (= solution (readme input))))))
