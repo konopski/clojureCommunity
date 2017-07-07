@@ -29,9 +29,9 @@
 )
 
 (defn readme [strng] 
-     (pol [
-      (rest (take-nth 2 (concat [""] (string/split-lines (horizontal strng))))) ][
+     (string/join "\n" (pol 
+      (rest (take-nth 2 (concat [""] (string/split-lines (horizontal strng))))) 
       (rest (take-nth 2 (concat [""] (string/split-lines (vertical   strng)))))
-     ])
+     ))
 
 )
